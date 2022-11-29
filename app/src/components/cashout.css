@@ -1,0 +1,38 @@
+.cash-out-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cash-out-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 92px;
+    width: 100%;
+    max-width: 640px;
+    background: #EFDECD;
+    background: -moz-linear-gradient(top, #EFDECD 0%, #CFC0B1 67%, #857B72 100%);
+    background: -webkit-linear-gradient(top, #EFDECD 0%, #CFC0B1 67%, #857B72 100%);background: #EFDECD;
+    background: -moz-linear-gradient(top, #EFDECD 0%, #CFC0B1 67%, #857B72 100%);
+    background: -webkit-linear-gradient(top, #EFDECD 0%, #CFC0B1 67%, #857B72 100%);
+}
+
+.cash-out-answer-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 50px;
+}
+
+
