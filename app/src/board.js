@@ -39,7 +39,7 @@ export class MainBoard extends React.Component {
     async startGame() {
         const params = {playerName: this.state.playerName};
 
-        const response = await fetch(`http://144.168.60.251:29725/game/start?name=${encodeURIComponent(params.playerName)}`, {
+        const response = await fetch(`http://144.168.60.251:3001/game/start?name=${encodeURIComponent(params.playerName)}`, {
             method: 'GET', headers: {
                 'Content-Type': 'application/json',
             },
@@ -60,7 +60,7 @@ export class MainBoard extends React.Component {
         let name = this.state.playerName;
         let bet = my_bet;
         let balance = this.state.balance;
-        const response = await fetch("http://144.168.60.251:29725/game/set_bet", {
+        const response = await fetch("http://144.168.60.251:3001/game/set_bet", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -78,7 +78,7 @@ export class MainBoard extends React.Component {
 
     async deal() {
         const param = {player_name: this.state.playerName, game_identity: this.state.gameIdentity};
-        const response = await fetch("http://144.168.60.251:29725/game/deal", {
+        const response = await fetch("http://144.168.60.251:3001/game/deal", {
             method: 'POST', headers: {
                 'Content-Type': 'application/json',
             }, body: JSON.stringify(param),
@@ -97,7 +97,7 @@ export class MainBoard extends React.Component {
     async stand() {
         let game_identity = this.state.gameIdentity;
         let name = this.state.playerName;
-        const response = await fetch("http://144.168.60.251:29725/game/stand", {
+        const response = await fetch("http://144.168.60.251:3001/game/stand", {
             method: 'POST', headers: {
                 'Content-Type': 'application/json',
             }, body: JSON.stringify({'game_identity': game_identity, 'player_name': name}),
@@ -116,7 +116,7 @@ export class MainBoard extends React.Component {
     async hit() {
         let game_identity = this.state.gameIdentity;
         let name = this.state.playerName;
-        const response = await fetch("http://144.168.60.251:29725/game/hit", {
+        const response = await fetch("http://144.168.60.251:3001/game/hit", {
             method: 'POST', headers: {
                 'Content-Type': 'application/json',
             }, body: JSON.stringify({'game_identity': game_identity, 'player_name': name}),
